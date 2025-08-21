@@ -4,24 +4,24 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Phone, Book, Heart, Headphones, Users } from 'lucide-react';
 
 const ResourcesHub = () => {
-  const emergencyContacts = [
+  const academicSupport = [
     {
-      name: 'National Suicide Prevention Lifeline',
-      number: '988',
-      description: '24/7 crisis support',
-      urgent: true,
-    },
-    {
-      name: 'Crisis Text Line',
-      number: 'Text HOME to 741741',
-      description: 'Free, confidential crisis support',
-      urgent: true,
-    },
-    {
-      name: 'SAMHSA National Helpline',
-      number: '1-800-662-4357',
-      description: 'Treatment referral and information service',
+      name: "Academic Success Center",
+      number: "Contact your institution",
+      description: "Study skills, tutoring, and academic coaching",
       urgent: false,
+    },
+    {
+      name: "Student Counseling Services", 
+      number: "Contact your campus",
+      description: "Mental health support for students",
+      urgent: false,
+    },
+    {
+      name: "Crisis Text Line",
+      number: "Text HOME to 741741",
+      description: "24/7 crisis support for overwhelmed students",
+      urgent: true,
     },
   ];
 
@@ -67,17 +67,17 @@ const ResourcesHub = () => {
 
   return (
     <div className="space-y-6">
-      {/* Emergency Contacts */}
-      <Card className="shadow-warm border-0 bg-gradient-to-br from-red-50 to-orange-50 border-l-4 border-l-destructive">
+      {/* Academic Support */}
+      <Card className="shadow-warm border-0 bg-gradient-to-br from-blue-50 to-indigo-50 border-l-4 border-l-primary">
         <CardHeader>
-          <CardTitle className="flex items-center space-x-2 text-destructive">
+          <CardTitle className="flex items-center space-x-2 text-primary">
             <Phone className="w-5 h-5" />
-            <span>Emergency Support</span>
+            <span>Academic Support</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4">
-            {emergencyContacts.map((contact, index) => (
+            {academicSupport.map((contact, index) => (
               <div key={index} className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
                 <div className="flex-1">
                   <div className="flex items-center space-x-2 mb-1">
@@ -91,7 +91,7 @@ const ResourcesHub = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="font-mono font-bold text-destructive border-destructive hover:bg-destructive hover:text-white"
+                  className="font-mono font-bold text-primary border-primary hover:bg-primary hover:text-white"
                   onClick={() => window.open(`tel:${contact.number.replace(/\D/g, '')}`)}
                 >
                   {contact.number}

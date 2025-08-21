@@ -7,9 +7,9 @@ const Navigation = () => {
 
   const navItems = [
     { icon: MessageCircle, label: 'Chat', href: '#chat' },
-    { icon: Heart, label: 'Mood', href: '#mood' },
-    { icon: BookOpen, label: 'Resources', href: '#resources' },
-    { icon: User, label: 'Profile', href: '#profile' },
+    { icon: BookOpen, label: 'Timer', href: '#study-timer' },
+    { icon: Heart, label: 'Energy', href: '#energy' },
+    { icon: User, label: 'Resources', href: '#resources' },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Navigation = () => {
               <Heart className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-semibold bg-warm-gradient bg-clip-text text-transparent">
-              EmpaChat
+              ScholarAI
             </span>
           </div>
 

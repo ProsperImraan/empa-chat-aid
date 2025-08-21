@@ -15,19 +15,19 @@ interface MoodEntry {
 const MoodTracker = () => {
   const [selectedMood, setSelectedMood] = useState<string>('');
   const [moodEntries, setMoodEntries] = useState<MoodEntry[]>([
-    { id: '1', mood: 'Happy', emoji: '😊', date: new Date(Date.now() - 86400000), color: 'bg-yellow-100 text-yellow-800' },
-    { id: '2', mood: 'Calm', emoji: '😌', date: new Date(Date.now() - 172800000), color: 'bg-blue-100 text-blue-800' },
-    { id: '3', mood: 'Anxious', emoji: '😰', date: new Date(Date.now() - 259200000), color: 'bg-orange-100 text-orange-800' },
+    { id: '1', mood: 'Productive', emoji: '💪', date: new Date(Date.now() - 86400000), color: 'bg-green-100 text-green-800' },
+    { id: '2', mood: 'Focused', emoji: '🎯', date: new Date(Date.now() - 172800000), color: 'bg-blue-100 text-blue-800' },
+    { id: '3', mood: 'Stressed', emoji: '😰', date: new Date(Date.now() - 259200000), color: 'bg-orange-100 text-orange-800' },
   ]);
 
   const moods = [
-    { name: 'Excellent', emoji: '🤩', icon: Sun, color: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200' },
-    { name: 'Happy', emoji: '😊', icon: Smile, color: 'bg-green-100 text-green-800 hover:bg-green-200' },
-    { name: 'Good', emoji: '🙂', icon: Heart, color: 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200' },
-    { name: 'Okay', emoji: '😐', icon: Meh, color: 'bg-gray-100 text-gray-800 hover:bg-gray-200' },
-    { name: 'Low', emoji: '😔', icon: Cloud, color: 'bg-blue-100 text-blue-800 hover:bg-blue-200' },
-    { name: 'Sad', emoji: '😢', icon: Frown, color: 'bg-indigo-100 text-indigo-800 hover:bg-indigo-200' },
-    { name: 'Anxious', emoji: '😰', icon: Zap, color: 'bg-orange-100 text-orange-800 hover:bg-orange-200' },
+    { name: 'Motivated', emoji: '🚀', icon: Sun, color: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200' },
+    { name: 'Productive', emoji: '💪', icon: Smile, color: 'bg-green-100 text-green-800 hover:bg-green-200' },
+    { name: 'Focused', emoji: '🎯', icon: Heart, color: 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200' },
+    { name: 'Neutral', emoji: '😐', icon: Meh, color: 'bg-gray-100 text-gray-800 hover:bg-gray-200' },
+    { name: 'Tired', emoji: '😴', icon: Cloud, color: 'bg-blue-100 text-blue-800 hover:bg-blue-200' },
+    { name: 'Stressed', emoji: '😰', icon: Frown, color: 'bg-red-100 text-red-800 hover:bg-red-200' },
+    { name: 'Overwhelmed', emoji: '🤯', icon: Zap, color: 'bg-orange-100 text-orange-800 hover:bg-orange-200' },
   ];
 
   const handleMoodSelect = (mood: typeof moods[0]) => {
@@ -64,7 +64,7 @@ const MoodTracker = () => {
     <div className="space-y-6">
       <Card className="shadow-gentle border-0 bg-card">
         <CardHeader>
-          <CardTitle className="text-center text-foreground">How are you feeling today?</CardTitle>
+          <CardTitle className="text-center text-foreground">How's your study energy today?</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
@@ -86,7 +86,7 @@ const MoodTracker = () => {
           {selectedMood && (
             <div className="mt-4 text-center">
               <Badge variant="secondary" className="bg-primary/10 text-primary">
-                Mood logged: {selectedMood} ✓
+                Energy level logged: {selectedMood} ✓
               </Badge>
             </div>
           )}
@@ -98,7 +98,7 @@ const MoodTracker = () => {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Heart className="w-5 h-5 text-primary" />
-              <span>Recent Moods</span>
+              <span>Study Energy Log</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -122,7 +122,7 @@ const MoodTracker = () => {
 
         <Card className="shadow-gentle border-0 bg-card">
           <CardHeader>
-            <CardTitle>Weekly Summary</CardTitle>
+            <CardTitle>Weekly Study Wellness</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -132,9 +132,9 @@ const MoodTracker = () => {
               </div>
               
               <div className="space-y-2">
-                <p className="text-sm font-medium text-foreground">Mood Distribution:</p>
+                <p className="text-sm font-medium text-foreground">Energy Distribution:</p>
                 <div className="grid grid-cols-2 gap-2">
-                  {['Happy', 'Calm', 'Anxious', 'Sad'].map(mood => {
+                  {['Productive', 'Focused', 'Stressed', 'Tired'].map(mood => {
                     const count = moodEntries.filter(entry => entry.mood === mood).length;
                     return (
                       <div key={mood} className="flex justify-between text-sm">

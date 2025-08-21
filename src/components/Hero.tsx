@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Heart, Sparkles } from 'lucide-react';
+import { MessageCircle, GraduationCap, Clock, BookOpen, Mic, Brain } from 'lucide-react';
 import heroImage from '@/assets/hero-mental-health.jpg';
 
 interface HeroProps {
@@ -22,19 +22,19 @@ const Hero = ({ onStartChat }: HeroProps) => {
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center shadow-warm">
-              <Heart className="w-10 h-10 text-white" />
+              <GraduationCap className="w-10 h-10 text-white" />
             </div>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Your Mental Health
+            Your Intelligent
             <span className="block bg-gradient-to-r from-yellow-200 to-white bg-clip-text text-transparent">
-              Companion
+              Study Companion
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            A safe space to share your thoughts, track your mood, and find support whenever you need it.
+            AI-powered academic assistant with voice support, study timers, and personalized learning guidance.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
@@ -51,10 +51,10 @@ const Hero = ({ onStartChat }: HeroProps) => {
               size="lg"
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 backdrop-blur-md text-lg px-8 py-6 rounded-full font-semibold"
-              onClick={() => document.querySelector('#mood')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.querySelector('#study-timer')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <Sparkles className="w-5 h-5 mr-2" />
-              Track Your Mood
+              <Clock className="w-5 h-5 mr-2" />
+              Study Timer
             </Button>
           </div>
           
@@ -62,25 +62,25 @@ const Hero = ({ onStartChat }: HeroProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-warm">
               <MessageCircle className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">AI Chat Support</h3>
+              <h3 className="text-white font-semibold mb-2">Voice AI Assistant</h3>
               <p className="text-white/80 text-sm">
-                Talk to our empathetic AI companion anytime you need someone to listen.
+                Voice-activated academic support for hands-free learning assistance.
               </p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-warm">
-              <Heart className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">Mood Tracking</h3>
+              <Clock className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h3 className="text-white font-semibold mb-2">Study Timer</h3>
               <p className="text-white/80 text-sm">
-                Log your daily emotions and discover patterns in your mental health journey.
+                Pomodoro sessions and focus tracking to maximize productivity.
               </p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-warm">
-              <Sparkles className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">Curated Resources</h3>
+              <Brain className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h3 className="text-white font-semibold mb-2">Smart Learning</h3>
               <p className="text-white/80 text-sm">
-                Access helpful articles, exercises, and professional support contacts.
+                Personalized study plans and academic guidance tailored to you.
               </p>
             </div>
           </div>
