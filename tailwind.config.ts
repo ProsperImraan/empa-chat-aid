@@ -67,7 +67,8 @@ export default {
 			},
 			backgroundImage: {
 				'warm-gradient': 'var(--warm-gradient)',
-				'soft-gradient': 'var(--soft-gradient)'
+				'soft-gradient': 'var(--soft-gradient)',
+				'healing-gradient': 'var(--healing-gradient)'
 			},
 			boxShadow: {
 				'gentle': 'var(--shadow-gentle)',

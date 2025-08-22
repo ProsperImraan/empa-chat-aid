@@ -38,12 +38,15 @@ All colors MUST be HSL.
     --input: 210 20% 96%;
     --ring: 210 100% 56%;
 
-    /* Custom mental health app colors */
+    /* Mental Health App Colors */
     --calm-blue: 210 100% 56%;
     --healing-green: 146 57% 45%;
     --gentle-purple: 270 95% 75%;
+    --therapy-teal: 180 25% 50%;
+    --mindful-mint: 160 40% 65%;
     --warm-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
     --soft-gradient: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --healing-gradient: linear-gradient(135deg, hsl(var(--therapy-teal)), hsl(var(--mindful-mint)));
     
     /* Shadows and effects */
     --shadow-gentle: 0 4px 20px -4px hsl(var(--primary) / 0.1);
